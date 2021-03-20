@@ -7,92 +7,85 @@ public class DfaOne {
     static void state0(char x) {
         if (x == 'a') {
             state = 1;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 2;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 3;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     static void state1(char x) {
         if (x == 'a') {
             state = 1;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 4;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 4;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     static void state2(char x) {
         if (x == 'a') {
             state = 5;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 2;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 5;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     static void state3(char x) {
         if (x == 'a') {
             state = 6;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 6;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 3;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     static void state4(char x) {
         if (x == 'a') {
             state = 1;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 4;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 4;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     static void state5(char x) {
         if (x == 'a') {
             state = 1;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 4;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 4;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     static void state6(char x) {
         if (x == 'a') {
             state = 1;
-        }
-        if (x == 'b') {
+        } else if (x == 'b') {
             state = 4;
-        }
-        if (x == 'c') {
+        } else if (x == 'c') {
             state = 4;
+        } else {
+            state = -1;
         }
-        state = -1;
     }
 
     public static void start(String inputText) {
@@ -124,10 +117,9 @@ public class DfaOne {
             System.out.println(x + " - " + state);
         }
 
-        if (state == 0
-                || state == 1
-                || state == 2
-                || state == 3) {
+        if (state == 4
+                || state == 5
+                || state == 6) {
             System.out.println("Word \"" + inputText + "\" has been ACCEPTED!");
         } else {
             System.out.println("Word \"" + inputText + "\" has been NOT ACCEPTED!");
